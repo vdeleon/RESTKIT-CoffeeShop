@@ -6,3 +6,21 @@ Really nice iOS tutorial showing RESTKit + Foursquare
 
 1. Just a simple list
 2. list + distance of the coffeehouses
+3. final is list of coffeehouses in a given area + checkins and distance from the apple office location
+
+
+
+Here is list of what you have done:
+- An introduction to UITableView using the Master-Detail Application template.
+- RestKit installation and configuration for your app.
+- Foursquare configuration for your app and an introduction to their Venues API.
+- Created data models for your app.
+- Setup RestKit mappings so that it can request, receive and parse the data into your data model.
+- Created a custom table view cell to display the Foursquare data.
+
+Here is what you did not do:
+- Setup and use NSURLConnections or NSURLConnectionDelegates.
+- Parse JSON or XML data.
+- Map the JSON or XML responses to your own objects.
+
+From here, feel free set up Foursquare user authentication to gain full access to Foursquare’s API and extend this example with even more features, or find other web services that you can use RestKit to provide data for your app.
