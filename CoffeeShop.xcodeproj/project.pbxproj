@@ -26,6 +26,8 @@
 		9E94A0BC16024C6B000DC727 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E94A0BB16024C6B000DC727 /* Security.framework */; };
 		9E94A0BE16024C70000DC727 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E94A0BD16024C70000DC727 /* SystemConfiguration.framework */; };
 		9EAF51981610231700792E0F /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAF51971610231700792E0F /* Location.m */; };
+		9EAF519B161029E100792E0F /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAF519A161029E100792E0F /* VenueCell.m */; };
+		9EAF519E16102BA500792E0F /* Stats.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAF519D16102BA500792E0F /* Stats.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,10 @@
 		9E94A0BD16024C70000DC727 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9EAF51961610231700792E0F /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		9EAF51971610231700792E0F /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		9EAF5199161029E100792E0F /* VenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCell.h; sourceTree = "<group>"; };
+		9EAF519A161029E100792E0F /* VenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCell.m; sourceTree = "<group>"; };
+		9EAF519C16102BA500792E0F /* Stats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stats.h; sourceTree = "<group>"; };
+		9EAF519D16102BA500792E0F /* Stats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stats.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,8 @@
 				9E2F362816101237004E3E4D /* Venue.m */,
 				9EAF51961610231700792E0F /* Location.h */,
 				9EAF51971610231700792E0F /* Location.m */,
+				9EAF519C16102BA500792E0F /* Stats.h */,
+				9EAF519D16102BA500792E0F /* Stats.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -172,6 +180,8 @@
 		9E94A07F160249B1000DC727 /* CoffeeShop */ = {
 			isa = PBXGroup;
 			children = (
+				9EAF5199161029E100792E0F /* VenueCell.h */,
+				9EAF519A161029E100792E0F /* VenueCell.m */,
 				9E58789C160B7FE200BD3089 /* Models */,
 				9E94A088160249B1000DC727 /* AppDelegate.h */,
 				9E94A089160249B1000DC727 /* AppDelegate.m */,
@@ -322,6 +332,8 @@
 				9E94A090160249B1000DC727 /* MasterViewController.m in Sources */,
 				9E2F362916101237004E3E4D /* Venue.m in Sources */,
 				9EAF51981610231700792E0F /* Location.m in Sources */,
+				9EAF519B161029E100792E0F /* VenueCell.m in Sources */,
+				9EAF519E16102BA500792E0F /* Stats.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

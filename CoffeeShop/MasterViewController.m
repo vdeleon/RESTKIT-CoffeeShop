@@ -7,6 +7,7 @@
 //
 #import <RestKit/RestKit.h>
 #import "Venue.h"
+#import "VenueCell.h"
 
 #import "MasterViewController.h"
 #define kCLIENTID "WK0K22EAUNOXAKH0RAQDS0F5G23NR43JQQOLR35R2F0GRAFU"
@@ -64,6 +65,14 @@
     [venueMapping mapRelationship:@"location" withMapping:locationMapping];
     // setMapping: tells objectManager to use locationMapping for location key in JSON data
     [objectManager.mappingProvider setMapping:locationMapping forKeyPath:@"location"];
+    
+    
+    // stats
+    RKObjectMapping *statsMapping = [RKObjectMapping mappingForClass:[Stats class]];
+    [statsMapping mapKeyPathsToAttributes:@"checkinsCount", @"checkins", @"tipCount", @"tips", @"usersCount", @"users",nil];
+    
+    [venueMapping mapRelationship:@"stats" withMapping:statsMapping];
+    [objectManager.mappingProvider setMapping:statsMapping forKeyPath:@"stats"];
     
     [self sendRequest];
     
@@ -147,20 +156,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
-    /*
-    // NSDate *object = [_objects objectAtIndex:indexPath.row];
-    // cell.textLabel.text = [object description];
-    
-     // v1 - just lists the coffeeshops, no details
-     Venue *venue = [data objectAtIndex:indexPath.row];
-    cell.textLabel.text = [venue name];
-       */
-    
+    VenueCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VenueCell"];
     Venue *venue = [data objectAtIndex:indexPath.row];
-    cell.textLabel.text = [venue.name length] > 24 ? [venue.name substringToIndex:24] : venue.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.0fm", [venue.location.distance floatValue]];
+    
+    cell.nameLabel.text = [venue.name length] > 25 ? [venue.name substringToIndex:25] : venue.name;
+    
+    cell.distanceLabel.text = [NSString stringWithFormat:@"%.0fm", [venue.location.distance floatValue]];
+    cell.checkinsLabel.text= [NSString stringWithFormat:@"%d checkins", [venue.stats.checkins intValue ]];
+    
+    
     return cell;
 }
 
